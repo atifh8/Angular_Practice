@@ -1,0 +1,20 @@
+<form (ngSubmit)="filter()" method="get">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Search Here </label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      aria-describedby="emailHelp"
+      placeholder="search"
+      name="name"
+      [(ngModel)]="filterValue"
+      placeholder="--search--"
+    />
+    <small id="emailHelp" class="form-text text-muted"> search name .</small>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="!filterValue">
+    {{ text }}
+  </button>
+</form>
