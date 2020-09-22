@@ -1,0 +1,14 @@
+button {
+  width: 19rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+div {
+  margin-left: 2rem;
+}
+.status {
+  width: 22rem;
+  font-family: "verdana";
+  align-content: center;
+  background-color: aquamarine;
+}

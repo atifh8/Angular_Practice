@@ -1,0 +1,30 @@
+<div class="card">
+  <h3>1. Binding in Angular</h3>
+  <div class="form-group form-control-sm">
+    <input type="text" [(ngModel)]="userName" class="form-control" />
+  </div>
+  <p>{{ userName }}</p>
+
+  <h3>2. Calling Methods on Events + ngStyle</h3>
+  <button
+    type="button"
+    class="btn btn-primary"
+    (click)="loadHtmlElement()"
+    [disabled]="!disableButton"
+  >
+    Load HTML Component
+  </button>
+  <!-- using ngStyle for dynamic styles  -->
+  <p [ngStyle]="{ color: getColor() }">Button enabled = {{ disableButton }}</p>
+
+  <!-- using ngClass -->
+  <p [ngClass]="{ status: disableButton }">
+    Button enabled = {{ disableButton }}
+  </p>
+  <br />
+  <p *ngIf="loadElement; else noClick">CLICKED !!!!</p>
+  <!--  using else  -->
+  <ng-template #noClick>
+    <p>NOT CLICKED !</p>
+  </ng-template>
+</div>
