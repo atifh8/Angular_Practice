@@ -1,0 +1,24 @@
+<h3>Using Angular pipes</h3>
+
+<!-- <p>Formatted date is {{ dat | date }}</p> -->
+<!-- <p>Formatted date is {{ dat | date: "MM/dd/yy" }}</p> -->
+<p>The hero's birthday is {{ dat | date: format }}</p>
+<button (click)="toggleFormat()" type="button" class="btn btn-outline-primary">
+  Toggle Format
+</button>
+<div class="card">
+  The chained hero's birthday is
+  {{ dat | date: "fullDate" | uppercase }}
+</div>
+
+<br />
+
+<app-day3-child></app-day3-child>
+<p>My Formatted date in Parent component{{ myDobReceived | date }}</p>
+<p class="child">{{ messageReceived }}</p>
+<p>
+  ViewChild allows one component to be injected into another, giving the parent
+  access to its attributes and functions. However, the child won’t be available
+  until after the view has been initialized. This means we need to implement the
+  <b> AfterViewInit lifecycle hook</b> to receive the data from the child.
+</p>

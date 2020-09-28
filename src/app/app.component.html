@@ -1,4 +1,58 @@
-<p>WELCOME TO APP</p>
-<app-users></app-users>
+<!-- <p>WELCOME TO APP</p> -->
+<!-- <app-users></app-users>
 <h1>This is Order Component</h1>
-<app-orders> </app-orders>
+<app-orders> </app-orders> -->
+<!-- <app-day3></app-day3> -->
+<!--  -->
+
+<div style="text-align: center">
+  <p>{{ title }}!</p>
+  <h1>Welcome to {{ title }}!</h1>
+</div>
+
+<div class="navbar-light bg-light" style="height: 2cm">
+  <nav
+    class="navbar navbar-expand-lg navbar-light bg-light"
+    style="float: right"
+  >
+    <a class="navbar-brand" routerLink=""> Routing in Angular 8</a>
+    <!-- <button
+      class="navbar-toggler"
+      type="button"
+      (click)="toggleNavbar()"
+      data-toggle="tab"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="day1" routerLinkActive="active"
+            >Day1<span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="day2" routerLinkActive="active"
+            >Day2</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="day3" routerLinkActive="active"
+            >Day3</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="products" routerLinkActive="active"
+            >Day4</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<div class="container text-center">
+  <router-outlet></router-outlet>
+</div>
