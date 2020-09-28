@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/day1', pathMatch: 'full' },
   { path: 'products', component: ProductComponent },
   { path: 'product-detail/:id', component: ProductDetailComponent },
-  { path: '**', component: PagenotfoundComponent }, // Wildcard route for a 404 page
+  { path: '**', component: PagenotfoundComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
